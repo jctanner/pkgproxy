@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"haxx.net/gosquid/hashing"
+    "github.com/jctanner/pkgproxy/pkg/proxycore/hashing"
 )
 
 const (

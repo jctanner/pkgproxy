@@ -17,8 +17,8 @@ import (
 
 // Load your CA certificate and key
 var (
-    caCert = loadCACert("/src/gosquid/caCert.pem")
-    caKey  = loadCAKey("/src/gosquid/caKey.pem")
+    caCert = loadCACert("/src/caCert.pem")
+    caKey  = loadCAKey("/src/caKey.pem")
 )
 
 // GetCertificateFunc returns a function compatible with tls.Config's GetCertificate.

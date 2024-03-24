@@ -11,8 +11,8 @@ import (
 	"strings"
 	"sync"
 
-	"haxx.net/gosquid/caching"
-	"haxx.net/gosquid/generator"
+    "github.com/jctanner/pkgproxy/pkg/proxycore/caching"
+    "github.com/jctanner/pkgproxy/pkg/proxycore/generator"
 )
 
 const (

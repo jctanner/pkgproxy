@@ -7,8 +7,8 @@ import (
 
 	"net/http"
 
-	"haxx.net/gosquid/generator"
-	"haxx.net/gosquid/handlers"
+    "github.com/jctanner/pkgproxy/pkg/proxycore/generator"
+    "github.com/jctanner/pkgproxy/pkg/proxycore/handlers"
 )
 
 const (
