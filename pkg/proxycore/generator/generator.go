@@ -13,12 +13,13 @@ import (
     "log"
     "math/big"
     "time"
+    "github.com/jctanner/pkgproxy/pkg/proxycore/utils"
 )
 
 // Load your CA certificate and key
 var (
-    caCert = loadCACert("/src/caCert.pem")
-    caKey  = loadCAKey("/src/caKey.pem")
+    caCert = loadCACert(utils.GetEnvOrDefault("CACERT", "/src/caCert.pem"))
+    caKey  = loadCAKey(utils.GetEnvOrDefault("CAKEY", "/src/caKey.pem"))
 )
 
 // GetCertificateFunc returns a function compatible with tls.Config's GetCertificate.

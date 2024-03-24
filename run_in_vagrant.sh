@@ -9,7 +9,8 @@ if [[ ! -f caCert.pem ]]; then
 fi
 
 if [[ ! -d /src ]]; then
-  mkdir /src
+  sudo mkdir /src
+  sudo chown -R vagrant:vagrant /src
 fi
 
 if [[ ! -f /src/caKey.pem ]]; then
@@ -20,4 +21,5 @@ if [[ ! -f /src/caCert.pem ]]; then
   cp caCert.pem /src/.
 fi
 
-go run ./cmd/pkgproxyd
+ip addr show | grep inet
+sudo go run ./cmd/pkgproxyd
