@@ -8,7 +8,7 @@ best=True
 skip_if_unavailable=False
 
 sslverify=false
-proxy=http://gosquid:80
+proxy=http://{PROXY_HOST}:{PROXY_PORT}
 ```
 
 `dnf --config=/path/to/your/dnf.conf install -y ...`
