@@ -15,34 +15,6 @@ import (
     "github.com/jctanner/pkgproxy/pkg/proxycore/generator"
 )
 
-const (
-	cacheDir   = "/src/packages"
-	listenAddr = ":3128"
-)
-
-/*
-func ProxyHandler(w http.ResponseWriter, r *http.Request) {
-
-	// Log every request
-	log.Printf("Request: %s %s", r.Method, r.URL.String())
-
-	if r.Method == "CONNECT" {
-		HandleConnectRequest(w, r)
-	} else {
-		cacheFile, resp, err := caching.GetCachedUrl(r)
-		if err != nil {
-			log.PrintF("Unable to get the cached file %", err
-		} else {
-
-			// Copy the response body to both the cache file and the response writer
-			multiWriter := io.MultiWriter(cacheFile, w)
-			if _, err := io.Copy(multiWriter, resp.Body); err != nil {
-				log.Printf("Failed to write data: %v", err)
-			}
-		}
-}
-*/
-
 func ProxyHandler(w http.ResponseWriter, r *http.Request) {
 	// Log every request
 	log.Printf("Request: %s %s", r.Method, r.URL.String())
